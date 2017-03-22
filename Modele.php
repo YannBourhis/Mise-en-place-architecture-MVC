@@ -1,6 +1,6 @@
 <?php
 
-// Renvoie la liste de tous les billets, triés par identifiant décroissant
+// Renvoie la liste de tous les billets, triÃ©s par identifiant dÃ©croissant
 function getBillets() {
   $bdd = getBdd();
   $billets = $bdd->query('select BIL_ID as id, BIL_DATE as date,'
@@ -9,8 +9,8 @@ function getBillets() {
   return $billets;
 }
 
-// Effectue la connexion à la BDD
-// Instancie et renvoie l'objet PDO associé
+// Effectue la connexion Ã  la BDD
+// Instancie et renvoie l'objet PDO associÃ©
 function getBdd() {
   $bdd = new PDO('mysql:host=localhost;dbname=monblog;charset=utf8',
   'ts2', 'ts2', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -25,12 +25,12 @@ function getBillet($idBillet) {
 			. ' where BIL_ID=?');
 	$billet->execute(array($idBillet));
 	if ($billet->rowCount() == 1)
-		return $billet->fetch();  // Accès à la première ligne de résultat
+		return $billet->fetch();  // AccÃ¨s Ã  la premiÃ¨re ligne de rÃ©sultat
 		else
-			throw new Exception("Aucun billet ne correspond à l'identifiant '$idBillet'");
+			throw new Exception("Aucun billet ne correspond Ã  l'identifiant '$idBillet'");
 }
 
-// Renvoie la liste des commentaires associés à un billet
+// Renvoie la liste des commentaires associÃ©s Ã  un billet
 function getCommentaires($idBillet) {
 	$bdd = getBdd();
 	$commentaires = $bdd->prepare('select COM_ID as id, COM_DATE as date,'

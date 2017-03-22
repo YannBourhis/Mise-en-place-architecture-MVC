@@ -4,7 +4,7 @@ require 'Modele.php';
 
 try {
   if (isset($_GET['id'])) {
-    // intval renvoie la valeur numérique du paramètre ou 0 en cas d'échec
+    // intval renvoie la valeur numÃ©rique du paramÃ¨tre ou 0 en cas d'Ã©chec
     $id = intval($_GET['id']);
     if ($id != 0) {
       $billet = getBillet($id);

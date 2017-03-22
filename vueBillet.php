@@ -10,7 +10,7 @@
 </article>
 <hr />
 <header>
-  <h1 id="titreReponses">Réponses à <?= $billet['titre'] ?></h1>
+  <h1 id="titreReponses">RÃ©ponses Ã  <?= $billet['titre'] ?></h1>
 </header>
 <?php foreach ($commentaires as $commentaire): ?>
   <p><?= $commentaire['auteur'] ?> dit :</p>
