@@ -1,7 +1,7 @@
 <?php
 
-require_once 'Controleur/ControleurAccueil.php';
-require_once 'Controleur/ControleurBillet.php';
+require_once 'ControleurAccueil.php';
+require_once 'ControleurBillet.php';
 require_once 'Vue/Vue.php';
 
 class Routeur {
